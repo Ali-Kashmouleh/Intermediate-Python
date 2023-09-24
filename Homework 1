@@ -1,0 +1,39 @@
+import random
+
+my_list = []
+
+for values in range(1000):
+    x = random.randint(1, 50)
+    my_list.append(x)
+
+print(my_list.sort())
+
+maximum = max(my_list)
+minimum = min(my_list)
+average = sum(my_list) / 1000
+
+print(maximum, minimum, average)
+
+my_dict = {}
+for numbers in my_list:
+    if numbers in my_dict:
+        my_dict[numbers] += 1
+    else:
+        my_dict[numbers] = 1
+
+for number in my_dict:
+    print(number, ':', my_dict[number])
+
+user_input = input("Please insert a number between 1 to 50: ")
+
+if user_input in my_dict:
+    print(user_input, "is in the list")
+else:
+    print(user_input, "is not in the list")
+
+
+
+
+
+
+
